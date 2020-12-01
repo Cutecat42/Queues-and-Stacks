@@ -46,7 +46,10 @@ class Queue {
   /** peek(): return the value of the first node in the queue. */
 
   peek() {
-
+    if (!this.size) {
+      throw new Error('Nothing to remove');
+    }
+    return this.first.val
   }
 
   /** isEmpty(): return true if the queue is empty, otherwise false */

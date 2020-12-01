@@ -38,14 +38,14 @@ describe("pop", function() {
   });
 });
 
-// describe("peek", function() {
-//   it("returns the value at the start of the stack", function() {
-//     stack.push(3);
-//     expect(stack.peek()).toBe(3);
-//     stack.push(5);
-//     expect(stack.peek()).toBe(5);
-//   });
-// });
+describe("peek", function() {
+  it("returns the value at the start of the stack", function() {
+    stack.push(3);
+    expect(stack.peek()).toBe(3);
+    stack.push(5);
+    expect(stack.peek()).toBe(5);
+  });
+});
 
 // describe("isEmpty", function() {
 //   it("returns true for empty stacks", function() {

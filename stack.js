@@ -51,7 +51,10 @@ class Stack {
   /** peek(): return the value of the first node in the stack. */
 
   peek() {
-
+    if (!this.size) {
+      throw new Error('Nothing to remove');
+    }
+    return this.first.val
   }
 
   /** isEmpty(): return true if the stack is empty, otherwise false */
