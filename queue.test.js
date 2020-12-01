@@ -20,23 +20,23 @@ describe("enqueue", function() {
   });
 });
 
-// describe("dequeue", function() {
-//   it("returns the value of the node removed", function() {
-//     queue.enqueue(10);
-//     queue.enqueue(100);
-//     queue.enqueue(1000);
-//     let removed = queue.dequeue();
-//     expect(removed).toBe(10);
-//     expect(queue.size).toBe(2);
-//     queue.dequeue();
-//     queue.dequeue();
-//     expect(queue.size).toBe(0);
-//   });
+describe("dequeue", function() {
+  it("returns the value of the node removed", function() {
+    queue.enqueue(10);
+    queue.enqueue(100);
+    queue.enqueue(1000);
+    let removed = queue.dequeue();
+    expect(removed).toBe(10);
+    expect(queue.size).toBe(2);
+    queue.dequeue();
+    queue.dequeue();
+    expect(queue.size).toBe(0);
+  });
 
-//   it("throws an error if the queue is empty", function() {
-//     expect(() => queue.dequeue()).toThrow(Error);
-//   });
-// });
+  it("throws an error if the queue is empty", function() {
+    expect(() => queue.dequeue()).toThrow(Error);
+  });
+});
 
 // describe("peek", function() {
 //   it("returns the value at the start of the queue", function() {

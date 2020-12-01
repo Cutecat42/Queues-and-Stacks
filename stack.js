@@ -25,18 +25,27 @@ class Stack {
     if (!this.first) {
       this.first = newNode;
       this.last = newNode;
-      this.size++
     }
-    this.first.next = newNode;
+    let tmp = this.first;
     this.first = newNode;
-
+    this.first.next = tmp;
+    this.size++
   }
 
   /** pop(): remove the node from the top of the stack
    * and return its value. Should throw an error if the stack is empty. */
 
   pop() {
-
+    if (!this.size) {
+      throw new Error('Nothing to remove');
+    }
+    if (this.first == this.last) {
+      this.last = null;
+    }
+    let removed = this.first;
+    this.first = removed.next;
+    this.size--;
+    return removed.val
   }
 
   /** peek(): return the value of the first node in the stack. */
