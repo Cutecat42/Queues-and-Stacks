@@ -17,9 +17,18 @@ class Stack {
     this.size = 0;
   }
 
-  /** push(val): add new value to end of the stack. Returns undefined. */
+  /** push(val): add new value to top of the stack. Returns undefined. */
 
   push(val) {
+    const newNode = new Node(val);
+
+    if (!this.first) {
+      this.first = newNode;
+      this.last = newNode;
+      this.size++
+    }
+    this.first.next = newNode;
+    this.first = newNode;
 
   }
 
