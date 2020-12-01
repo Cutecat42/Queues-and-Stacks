@@ -47,13 +47,13 @@ describe("peek", function() {
   });
 });
 
-// describe("isEmpty", function() {
-//   it("returns true for empty stacks", function() {
-//     expect(stack.isEmpty()).toBe(true);
-//   });
+describe("isEmpty", function() {
+  it("returns true for empty stacks", function() {
+    expect(stack.isEmpty()).toBe(true);
+  });
 
-//   it("returns false for nonempty stacks", function() {
-//     stack.push(3);
-//     expect(stack.isEmpty()).toBe(false);
-//   });
-// });
+  it("returns false for nonempty stacks", function() {
+    stack.push(3);
+    expect(stack.isEmpty()).toBe(false);
+  });
+});

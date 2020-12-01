@@ -60,7 +60,10 @@ class Stack {
   /** isEmpty(): return true if the stack is empty, otherwise false */
 
   isEmpty() {
-
+    if (!this.size) {
+      return true
+    }
+    return false
   }
 }
 
